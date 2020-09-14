@@ -1,0 +1,7 @@
+.header {
+  height: 40vh;
+  background-image: url("../images/loteria.jfif");
+  background-size: auto;
+  background-position-x: left;
+  background-repeat: no-repeat;
+}
