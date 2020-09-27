@@ -10,6 +10,21 @@
       crossorigin="anonymous"
     />
     <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script
       src="https://kit.fontawesome.com/10753f982c.js"
       crossorigin="anonymous"
     ></script>
@@ -27,40 +42,80 @@
       </div>
     </header>
     <!--menu principal-->
-    <section class="container mt-3">
-      <h2 class="text-center">Bienvenido que desea realizar?</h2>
-      <div
-        class="row justify-content-center align-items-center shadow m-3"
-        style="flex-direction: column"
-      >
-        <div class="col-lg-4 col-md-4 col-xs-12 text-center p-3">
-          <a href="#" class="btn btn-danger text-white badge-pill"
-            >Expedientes</a
-          >
-        </div>
-        <div class="col-lg-4 col-md-4 col-xs-12 text-center p-3">
-          <a href="#" class="btn btn-danger text-white badge-pill">Usuarios</a>
-        </div>
-        <div class="col-lg-4 col-md-4 col-xs-12 text-center p-3">
-          <a href="#" class="btn btn-danger text-white badge-pill"
-            >Información</a
-          >
-        </div>
-        <div class="col-lg-4 col-md-4 col-xs-12 text-center p-3">
-          <a href="#" class="btn btn-danger text-white badge-pill"
-            >Bandejas de pases</a
-          >
-        </div>
-        <div class="col-lg-4 col-md-4 col-xs-12 text-center p-3">
-          <a href="#" class="btn btn-danger text-white badge-pill"
-            >Cerrar Sesión</a
-          >
+    <div class="container mt-3">
+      <h2 class="text-center">Que desea realizar?</h2>
+      <div class="row shadow">
+        <div class="col-xl-4 col-lg-6 col-xs-12 shadow">
+          <div class="dropdown p-3">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Expedientes
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="nuevo_exp.html">Nuevo</a>
+              <a class="dropdown-item" href="#">Consultar</a>
+              <a class="dropdown-item" href="#">Buscar</a>
+            </div>
+          </div>
+          <div class="dropdown p-3">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Usuarios
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="nuevo_usuario.html">Nuevo</a>
+              <a class="dropdown-item" href="edit_usuario.html">Editar</a>
+              <a class="dropdown-item" href="#">Buscar</a>
+            </div>
+          </div>
+          <div class="dropdown p-3">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Bandeja de pases
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Recibir</a>
+              <a class="dropdown-item" href="#">Archivar</a>
+              <a class="dropdown-item" href="#">enviar</a>
+            </div>
+          </div>
+          <div class="dropdown p-3">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Cerrar Sesión
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Cerrar Sesión</a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!--fin menu-->
-    </section>
-    <footer class="contanier-fluid mt-5 bg-dark">
+    </div>
+    <footer class="contanier mt-5 bg-dark">
       <div class="row justify-content-center align-items-center">
         <div class="col-lg-3 col-md-3 col-xs-12 text-center text-white">
           <address>
