@@ -31,32 +31,54 @@
     <h2 class="text-center">Nuevo Usuario</h2>
     <div class="row shadow">
       <div class="col-xl-4 col-lg-6 col-xs-12 shadow">
-        <div class="p-3">
-          <a href="index.html" class="btn btn-danger text-white badge-pill"
-            >Inicio</a
-          >
-        </div>
-        <div class="p-3">
-          <a href="#" class="btn btn-danger text-white badge-pill"
-            >Nuevo Usuario</a
-          >
-        </div>
-        <div class="p-3">
-          <a href="#" class="btn btn-danger text-white badge-pill"
-            >Consulta de Expedientes</a
-          >
-        </div>
-        <div class="p-3">
-          <a href="#" class="btn btn-danger text-white badge-pill"
-            >Bandeja de Expedientes</a
-          >
-        </div>
-        <div class="p-3">
-          <a href="#" class="btn btn-danger text-white badge-pill"
-            >Cerrar Sesión</a
-          >
+        <div class="dropdown p-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Inicio
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="index.html">Inico</a>
         </div>
       </div>
+      <div class="dropdown p-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Expedientes
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="nuevo_exp.html">Nuevo</a>
+          <a class="dropdown-item" href="#">Consultar</a>
+          <a class="dropdown-item" href="#">Buscar</a>
+        </div>
+      </div>
+      <div class="dropdown p-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Usuarios
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="nuevo_usuario.html">Nuevo</a>
+          <a class="dropdown-item" href="edit_usuario.html">Editar</a>
+          <a class="dropdown-item" href="#">Buscar</a>
+        </div>
+      </div>
+      <div class="dropdown p-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Bandeja de pases
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Recibir</a>
+          <a class="dropdown-item" href="#">Archivar</a>
+          <a class="dropdown-item" href="#">enviar</a>
+        </div>
+      </div>
+      <div class="dropdown p-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cerrar Sesión
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Cerrar Sesión</a>
+          
+        </div>
+      </div>
+  </div>
       <div class="col-xl-8 col-lg-6 col-xs-12">
         <div class="alert bg-light text-dark shadow">
           <form method="POST" action="#">

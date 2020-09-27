@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,7 +29,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Seguimiento de Expedientes</title>
+    <title>Busqueda de Expedientes</title>
   </head>
   <body>
     <header class="container-fluid bg-light header shadow">
@@ -41,11 +41,25 @@
         </div>
       </div>
     </header>
-    <!--menu principal-->
-    <div class="container mt-3">
-      <h2 class="text-center">Que desea realizar?</h2>
+    <div class="container-fluid mt-3">
+      <h2 class="text-center">Criterios Busquedas</h2>
       <div class="row shadow">
-        <div class="col-xl-4 col-lg-6 col-xs-12 shadow">
+        <div class="col-xl-3 col-lg-6 col-xs-12 shadow">
+          <div class="dropdown p-3">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Inicio
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="index.html">Inico</a>
+            </div>
+          </div>
           <div class="dropdown p-3">
             <button
               class="btn btn-secondary dropdown-toggle"
@@ -59,8 +73,8 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item" href="nuevo_exp.html">Nuevo</a>
-              <a class="dropdown-item" href="consulta_exp.html">Consultar</a>
-              <a class="dropdown-item" href="#">Listado</a>
+              <a class="dropdown-item" href="#">Consultar</a>
+              <a class="dropdown-item" href="#">Buscar</a>
             </div>
           </div>
           <div class="dropdown p-3">
@@ -113,9 +127,58 @@
             </div>
           </div>
         </div>
+        <div class="col-xl-9 col-lg-6 col-xs-12">
+          <div class="alert bg-light text-dark shadow">
+            <form method="POST" action="#">
+              <label for="nume_ex">N° Expediente</label>
+              <input
+                type="number"
+                id="nume_ex"
+                placeholder="numero incremental"
+              />
+              <span>
+                <label for="reparticion" class="">Repartición</label>
+                <select id="reparticion">
+                  <option>reparticion1</option>
+                  <option>reparticion2</option>
+                  <option>reparticion3</option>
+                  <option>reparticion4</option>
+                  <option>reparticion2</option>
+                </select>
+              </span>
+
+              <label for="rubro" class="">Rubro</label>
+              <select id="rubro">
+                <option>Rubro</option>
+                <option>Rubro2</option>
+                <option>Rubro3</option>
+                <option>Rubro4</option>
+                <option>Rubro5</option>
+              </select>
+              <label for="iniciador" class="">Iniciador</label>
+              <select id="iniciador">
+                <option>Iniciador</option>
+                <option>Iniciador</option>
+                <option>Iniciador</option>
+                <option>Iniciador</option>
+                <option>Iniciador</option>
+              </select>
+              <br />
+              <label for="fec_ini" class="">Fecha de Inicio </label>
+              <input type="date" id="fec_ini" placeholder="Fecha de inicio" />
+              <label for="fec_desde" class="">Fecha desde </label>
+              <input type="date" id="fec_desde" placeholder="Fecha desde" />
+              <label for="fec_hasta" class="">Fecha hasta </label>
+              <input type="date" id="fec_hasta" placeholder="Fecha hasta" />
+              <br />
+
+              <button class="btn-secondary">Buscar</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
-    <footer class="contanier mt-5 bg-dark">
+    <footer class="contanier-fluid mt-5 bg-dark">
       <div class="row justify-content-center align-items-center">
         <div class="col-lg-3 col-md-3 col-xs-12 text-center text-white">
           <address>
