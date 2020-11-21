@@ -127,6 +127,8 @@
                     <a class="dropdown-item" href="edit_rubro.html">Editar Rubro</a>
                     <a class="dropdown-item" href="nuevo_iniciador.html">Agregar Iniciador</a>
                     <a class="dropdown-item" href="edit_iniciador.html">Editar Iniciador</a>
+                    <a class="dropdown-item" href="nueva_repart.html">Agregar Reparticion</a>
+                    <a class="dropdown-item" href="#">Editar Reparticion</a>
                 </div>
               </div>
               <div class="dropdown p-3">
@@ -160,6 +162,11 @@
                   <option>reparticion4</option>
                   <option>reparticion2</option>
                 </select>
+                <!--prueba modal repar-->
+               <button type="button" class="btn btn-secondary " data-toggle="modal" data-target="#exampleModal2">
+                Editar
+              </button>
+              <!--fin de prueba repar-->
               </span>
               
             </br>
@@ -171,6 +178,11 @@
                 <option>Rubro4</option>
                 <option>Rubro5</option>
               </select>
+               <!--prueba modal rubro-->
+               <button type="button" class="btn btn-secondary " data-toggle="modal" data-target="#exampleModal1">
+                Editar
+              </button>
+              <!--fin de prueba rubro-->
               <label for="iniciador" class="p-3">Iniciador</label>
               <select id="iniciador">
                 <option>Iniciador</option>
@@ -179,8 +191,15 @@
                 <option>Iniciador</option>
                 <option>Iniciador</option>
               </select>
+              <!--prueba modal-->
+              <button type="button" class="btn btn-secondary " data-toggle="modal" data-target="#exampleModal">
+                Editar
+              </button>
+              <!--fin de prueba-->
+              <br>
               <label for="fec_ini" class="p-3">Fecha de Inicio </label>
               <input type="date" id="fec_ini" placeholder="Fecha de inicio"> 
+              <br>
               <label for="concepto">Concepto</label>
               <br />
               <textarea
@@ -228,5 +247,176 @@
           </div>
         </div>
       </footer>
+       <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agragar Iniciador</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+          
+            <form method="POST" action="#">
+              
+              <label for="iniciador">Iniciador</label>
+              <input
+                type= "text"
+                id="iniciador"
+                placeholder="Iniciador"
+                maxlength="20"
+              /><br>
+              <label for="nombre">Nombre</label>
+              <input
+                type= "text"
+                id="nombre"
+                placeholder="Iniciador"
+                maxlength="20"
+              /><br>
+              <label for="apellido">Apellido</label>
+              <input
+                type= "text"
+                id="apellido"
+                placeholder="Iniciador"
+                maxlength="20"
+              /><br>
+              <label for="cargo">Cargo</label>
+              <input
+                type= "text"
+                id="cargo"
+                placeholder="Iniciador"
+                maxlength="20"
+              />
+              <br>          
+              <label for="concepto">Descripción</label>
+              <br />
+              <textarea
+                
+                id="concepto"
+                minlength="10"
+                maxlength="100"
+                rows="5"
+                cols="60"
+                placeholder="Descripción del Iniciador"
+              ></textarea>
+              
+              
+            </form>
+          
+        
+          
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- Modal rubro -->
+ <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">Agragar Iniciador</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="#">
+            
+          <label for="rubro">Rubro</label>
+          <input
+            type= "text"
+            id="rubro"
+            placeholder="Rubro"
+            maxlength="20"
+          />
+          <br>          
+          <label for="concepto">Descripción</label>
+          <br />
+          <textarea
+            
+            id="concepto"
+            minlength="10"
+            maxlength="100"
+            rows="5"
+            cols="60"
+            placeholder="Descripción del rubro"
+          ></textarea>
+          <br>
+          <button class="btn btn-dark badge-pill">Guardar</button>
+          <button class="btn btn-dark badge-pill">Cancelar</button>
+          <a  href="index.html" class="btn btn-dark badge-pill">Volver</a>
+        </form>
+        
+          
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal final rubro -->
+<!-- Modal reparti-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel2">Agragar Reparticion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="#">
+            
+          <label for="rubro">Reparticion</label>
+          <input
+            type= "text"
+            id="reparticion"
+            placeholder="Repartición"
+            maxlength="20"
+          />
+          <br>          
+          <label for="concepto">Descripción</label>
+          <br />
+          <textarea
+            
+            id="concepto"
+            minlength="10"
+            maxlength="100"
+            rows="5"
+            cols="60"
+            placeholder="Descripción del reparticion"
+          ></textarea>
+          <br>
+          <button class="btn btn-dark badge-pill">Guardar</button>
+          <button class="btn btn-dark badge-pill">Cancelar</button>
+          <a  href="index.html" class="btn btn-dark badge-pill">Volver</a>
+        </form>
+        
+          
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal final reparti -->
   </body>
 </html>
