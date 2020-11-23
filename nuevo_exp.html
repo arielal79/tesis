@@ -54,7 +54,7 @@
                   Inicio
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="index.html">Inico</a>
+                  <a class="dropdown-item" href="index.html">Inicio</a>
                 </div>
               </div>
               <div class="dropdown p-3">
@@ -143,79 +143,101 @@
           </div>
         <div class="col-xl-8 col-lg-6 col-xs-12">
           <div class="alert bg-light text-dark shadow">
-            <form method="POST" action="#">
+           
+            <!--nuevo form-->
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                   <label for="nume_ex">N° Expediente</label>
+                   <input
+                    class="form-control"  
+                    type="number"
+                    id="nume_ex"
+                    placeholder="numero incremental"
+                    maxlength="10"
+                   />
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="reparticion" >Repartición</label>
+                  <select id="reparticion" class="form-control">
+                    <option selected>reparticion1</option>
+                    <option>reaparticion2</option>
+                    <option>reaparticion3</option>
+                  </select>
+                 </div> 
+                 <!--btn repar-->
+                 <div class="form-group col-md-2 p-2">
+                  <label for="reparticion" ></label>
+                  <button type="button" class="btn btn-secondary form-control" data-toggle="modal" data-target="#exampleModal2">
+                  Agregar
+                  </button>
+                 </div> 
+                <!--fin btn repar-->
+              </div>
               
-              <label for="nume_ex">N° Expediente</label>
-              <input
-                type="number"
-                id="nume_ex"
-                placeholder="numero incremental"
-                maxlength="20"
-              />
-              <span>
-                  
-                <label for="reparticion" class="p-3">Repartición</label>
-                <select id="reparticion">
-                  <option>reparticion1</option>
-                  <option>reparticion2</option>
-                  <option>reparticion3</option>
-                  <option>reparticion4</option>
-                  <option>reparticion2</option>
-                </select>
-                <!--prueba modal repar-->
-               <button type="button" class="btn btn-secondary " data-toggle="modal" data-target="#exampleModal2">
-                ➕
-              </button>
-              <!--fin de prueba repar-->
-              </span>
               
-            </br>
-              <label for="rubro" class="p-3">Rubro</label>
-              <select id="rubro">
-                <option>Rubro</option>
-                <option>Rubro2</option>
-                <option>Rubro3</option>
-                <option>Rubro4</option>
-                <option>Rubro5</option>
-              </select>
-               <!--prueba modal rubro-->
-               <button type="button" class="btn btn-secondary " data-toggle="modal" data-target="#exampleModal1">
-                ➕
-              </button>
-              <!--fin de prueba rubro-->
-              <label for="iniciador" class="p-3">Iniciador</label>
-              <select id="iniciador">
-                <option>Iniciador</option>
-                <option>Iniciador</option>
-                <option>Iniciador</option>
-                <option>Iniciador</option>
-                <option>Iniciador</option>
-              </select>
-              <!--prueba modal-->
-              <button type="button" class="btn btn-secondary " data-toggle="modal" data-target="#exampleModal">
-                ➕
-              </button>
-              <!--fin de prueba-->
-              <br>
-              <label for="fec_ini" class="p-3">Fecha de Inicio </label>
-              <input type="date" id="fec_ini" placeholder="Fecha de inicio"> 
-              <br>
-              <label for="concepto">Concepto</label>
-              <br />
-              <textarea
+              <div class="form-row">
+                <div class="form-group col-md-3">
+                  <label for="rubro">Rubro</label>
+                  <select id="rubro" class="form-control">
+                    <option>Rubro</option>
+                    <option>Rubro2</option>
+                    <option>Rubro3</option>
+                    <option>Rubro4</option>
+                    <option>Rubro5</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2 p-2">
+                  <label for="rubro" ></label>
+                  <button type="button" class="btn btn-secondary form-control" data-toggle="modal" data-target="#exampleModal1">
+                  Agregar
+                  </button>
+                 </div> 
+                <div class="form-group col-md-3">
+                  <label for="iniciador">Iniciador</label>
+                  <select id="iniciador" class="form-control">
+                    <option selected>Iniciador</option>
+                    <option>Iniciador</option>
+                    <option>Iniciador</option>
+                    <option>Iniciador</option>
+                    <option>Iniciador</option>
+                    <option>Iniciador</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2 p-2">
+                  <label for="iniciador" ></label>
+                  <button type="button" class="btn btn-secondary form-control" data-toggle="modal" data-target="#exampleModal">
+                  Agregar
+                  </button>
+                 </div> 
                 
-                id="concepto"
-                minlength="10"
-                maxlength="100"
-                rows="5"
-                cols="60"
-                placeholder="Descripción del Expediente"
-              ></textarea>
-              <br>
-              <button class="btn btn-dark badge-pill">Guardar e imprimir</button>
-              <button class="btn btn-dark badge-pill">Cancelar</button>
-              <a  href="index.html" class="btn btn-dark badge-pill">Volver</a>
+              </div>
+              <div class="form-row">
+                 <div class="form-group col-md-4">
+                  <label for="fojas" >Fojas </label>
+                  <input type="number" id="fojas" class="form-control" placeholder="Cantidad de fojas"> 
+                 </div>                 
+                <div class="form-group col-md-4">
+                  <label for="fech_inicio">Fecha de inicio</label>
+                  <input type="date" class="form-control" id="fech_inicio">
+                 </div>
+              </div>  
+                   <div class="form-row">
+                    <div class="form-group col-md-8">
+                        <label for="concepto">Concepto</label>
+                           <textarea
+                            class="form-control"
+                           id="concepto"
+                             placeholder="Descripción del Expediente"
+                         ></textarea>
+                    </div>  
+            </div>
+          
+              <button class="btn btn-secondary">Guardar e imprimir</button>
+              <button class="btn btn-secondary">Cancelar</button>
+              <a  href="index.html" class="btn btn-secondary">Volver</a>
             </form>
+            <!--Fin nuevo form-->
           </div>
         </div>
       </div>
