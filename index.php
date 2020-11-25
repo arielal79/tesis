@@ -63,7 +63,7 @@
               Bandeja de pases
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="bandeja.html">Recibir</a>
+              <a class="dropdown-item" href="bandeja.php">Recibir</a>
               <a class="dropdown-item" href="#">Archivar</a>
               <a class="dropdown-item" href="#">enviar</a>
             </div>
@@ -80,8 +80,8 @@
               Expedientes
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="nuevo_exp.html">Nuevo</a>
-              <a class="dropdown-item" href="consulta_exp.html">Consultar</a>
+              <a class="dropdown-item" href="nuevo_exp.php">Nuevo</a>
+              <a class="dropdown-item" href="consulta_exp.php">Consultar</a>
               <a class="dropdown-item" href="#">Listado</a>
             </div>
           </div>
@@ -97,8 +97,8 @@
               Usuarios
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="nuevo_usuario.html">Nuevo</a>
-              <a class="dropdown-item" href="edit_usuario.html">Editar</a>
+              <a class="dropdown-item" href="nuevo_usuario.php">Nuevo</a>
+              <a class="dropdown-item" href="edit_usuario.php">Editar</a>
               <a class="dropdown-item" href="#">Buscar</a>
             </div>
           </div>
@@ -131,11 +131,11 @@
               Mantenimiento
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="nuevo_rubro.html">Agregar Rubro</a>
-                <a class="dropdown-item" href="edit_rubro.html">Editar Rubro</a>
-                <a class="dropdown-item" href="nuevo_iniciador.html">Agregar Iniciador</a>
-                <a class="dropdown-item" href="edit_iniciador.html">Editar Iniciador</a>
-                <a class="dropdown-item" href="nueva_repart.html">Agregar Reparticion</a>
+              <a class="dropdown-item" href="nuevo_rubro.php">Agregar Rubro</a>
+                <a class="dropdown-item" href="edit_rubro.php">Editar Rubro</a>
+                <a class="dropdown-item" href="nuevo_iniciador.php">Agregar Iniciador</a>
+                <a class="dropdown-item" href="edit_iniciador.php">Editar Iniciador</a>
+                <a class="dropdown-item" href="nueva_repart.php">Agregar Reparticion</a>
                 <a class="dropdown-item" href="#">Editar Reparticion</a>
             </div>
           </div>

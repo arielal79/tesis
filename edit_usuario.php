@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--prueba bootstrap-->
@@ -34,28 +34,28 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Nuevo Rubro</title>
-</head>
-<body>
+    <title>Editar Usuario</title>
+  </head>
+  <body>
     <header class="container-fluid bg-light header shadow">
-        <div class="row">
-          <div class="col">
-            <h1 class="text-dark text-center p-3 mt-5">
-              Sistema de Seguimiento de Expedientes
-            </h1>
-          </div>
+      <div class="row">
+        <div class="col">
+          <h1 class="text-dark text-center p-3 mt-5">
+            Sistema de Seguimiento de Expedientes
+          </h1>
         </div>
-      </header>
-      <div class="container mt-3">
-        <h2 class="text-center">Agregar Rubro</h2>
+      </div>
+    </header>
+    <div class="container mt-3">
+        <h2 class="text-center">Editar Usuario</h2>
         <div class="row shadow">
-          <div class="col-xl-4 col-lg-6 col-xs-12 shadow">
+          <div class="col-xl-4 col-lg-6 col-xs-12 shadow">         
             <div class="dropdown p-3">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Inicio
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="index.html">Inico</a>
+                <a class="dropdown-item" href="index.php">Inicio</a>
               </div>
             </div>
             <div class="dropdown p-3">
@@ -70,7 +70,7 @@
                 Bandeja de pases
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="bandeja.html">Recibir</a>
+                <a class="dropdown-item" href="bandeja.php">Recibir</a>
                 <a class="dropdown-item" href="#">Archivar</a>
                 <a class="dropdown-item" href="#">enviar</a>
               </div>
@@ -80,8 +80,8 @@
                 Expedientes
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="nuevo_exp.html">Nuevo</a>
-                <a class="dropdown-item" href="consulta_exp.html">Consultar</a>
+                <a class="dropdown-item" href="nuevo_exp.php">Nuevo</a>
+                <a class="dropdown-item" href="consulta_exp.php">Consultar</a>
                 <a class="dropdown-item" href="#">Buscar</a>
               </div>
             </div>
@@ -90,8 +90,8 @@
                 Usuarios
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="nuevo_usuario.html">Nuevo</a>
-                <a class="dropdown-item" href="edit_usuario.html">Editar</a>
+                <a class="dropdown-item" href="nuevo_usuario.php">Nuevo</a>
+                <a class="dropdown-item" href="edit_usuario.php">Editar</a>
                 <a class="dropdown-item" href="#">Buscar</a>
               </div>
             </div>
@@ -124,11 +124,11 @@
                 Mantenimiento
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="nuevo_rubro.html">Agregar Rubro</a>
-                  <a class="dropdown-item" href="edit_rubro.html">Editar Rubro</a>
-                  <a class="dropdown-item" href="nuevo_iniciador.html">Agregar Iniciador</a>
-                  <a class="dropdown-item" href="edit_iniciador.html">Editar Iniciador</a>
-                  <a class="dropdown-item" href="nueva_repart.html">Agregar Reparticion</a>
+                <a class="dropdown-item" href="nuevo_rubro.php">Agregar Rubro</a>
+                  <a class="dropdown-item" href="edit_rubro.php">Editar Rubro</a>
+                  <a class="dropdown-item" href="nuevo_iniciador.php">Agregar Iniciador</a>
+                  <a class="dropdown-item" href="edit_iniciador.php">Editar Iniciador</a>
+                  <a class="dropdown-item" href="nueva_repart.php">Agregar Reparticion</a>
                   <a class="dropdown-item" href="#">Editar Reparticion</a>
               </div>
             </div>
@@ -142,64 +142,93 @@
               </div>
             </div>
         </div>
-      <div class="col-xl-8 col-lg-6 col-xs-12">
-        <div class="alert bg-light text-dark shadow">
-          <form method="POST" action="#">
+          <div class="col-xl-8 col-lg-6 col-xs-12">
+            <div class="alert bg-light text-dark shadow">
+              <form method="POST" action="#">
+                
+                <label for="cod_user" class="p-3">Codigo de Usuario</label>
+                <input
+                  type="number"
+                  id="cod_user"
+                  placeholder="Codigo de usuario"
+                  maxlength="8"
+                />
+                <br>
+                <span>
+                <label for="nombre" class="p-3">Nombre</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  placeholder="Nombre"
+                  maxlength="30"
+                />   
+                <label for="apellido" class="p-3">Apellido</label>
+                <input
+                  type="text"
+                  id="apellido"
+                  placeholder="Apellido"
+                  maxlength="30"
+                />  </span> 
+                
             
-            <label for="reparticion">Reparticion</label>
-            <input
-              type= "text"
-              id="reparticion"
-              placeholder="Reparticíon"
-              maxlength="20"
-            />
-            <br>          
-            <label for="concepto">Descripción</label>
-            <br />
-            <textarea
-              
-              id="concepto"
-              minlength="10"
-              maxlength="100"
-              rows="5"
-              cols="60"
-              placeholder="Descripción de la reparticion"
-            ></textarea>
-            <br>
-            <button class="btn btn-dark badge-pill">Guardar</button>
-            <button class="btn btn-dark badge-pill">Cancelar</button>
-            <a  href="index.html" class="btn btn-dark badge-pill">Volver</a>
-          </form>
+              </br>
+              <label for="usuario" class="p-3">Nombre de usuario</label>
+                <input
+                  type="text"
+                  id="usuario"
+                  placeholder="Usuario"
+                  maxlength="30"/><br>
+    
+                  <label for="clave" class="p-3">Clave</label>
+                <input
+                  type="password"
+                  id="clave"
+                  placeholder="Clave"
+                  maxlength="10"/>
+    
+                  <label for="conf_clave" class="p-3">Confirmar clave</label>
+                  <input
+                    type="password"
+                    id="conf_clave"
+                    placeholder="Confirmar clave"
+                    maxlength="10"/>
+                    <br>        
+                
+                <button class="btn btn-dark badge-pill ">Guardar</button>
+                <button class="btn btn-dark badge-pill ">Cancelar</button>
+                <a  href="index.php" class="btn btn-dark badge-pill">Volver</a>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-      <footer class="contanier mt-5 bg-dark">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-lg-3 col-md-3 col-xs-12 text-center text-white">
-            <address>
-              <p>Blas Parera 1662</p>
-            </address>
-            <p>Tel.:37947748..</p>
-            <i class="fab fa-instagram fa-3x text-danger"></i>
-            <i class="fab fa-facebook-f fa-3x text-primary"></i>
-          </div>
-          <div class="col-lg-3 col-md-3 col-xs-12 text-center text-white">
-            Copyright © 2020 Imagine Team
-          </div>
-          <div class="col-lg-3 col-md-3 col-xs-12 pt-1">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.7773837576874!2d-58.84274398543196!3d-27.47618912355605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456c9788659f4b%3A0x3ea9ff0e2be2b443!2sBlas%20Parera%201662%2C%20W3410FTA%20Corrientes!5e0!3m2!1ses!2sar!4v1599098823998!5m2!1ses!2sar"
-              width="100%"
-              height="200px"
-              frameborder="0"
-              style="border: 0"
-              allowfullscreen=""
-              aria-hidden="false"
-              tabindex="0"
-            ></iframe>
-          </div>
+    
+    <footer class="contanier-fluid mt-5 bg-dark">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-3 col-md-3 col-xs-12 text-center text-white">
+          <address>
+            <p>Blas Parera 1662</p>
+          </address>
+          <p>Tel.:37947748..</p>
+          <i class="fab fa-instagram fa-3x text-danger"></i>
+          <i class="fab fa-facebook-f fa-3x text-primary"></i>
         </div>
-      </footer>
-</body>
+        <div class="col-lg-3 col-md-3 col-xs-12 text-center text-white">
+          Copyright © 2020 Imagine Team
+        </div>
+        <div class="col-lg-3 col-md-3 col-xs-12 pt-1">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.7773837576874!2d-58.84274398543196!3d-27.47618912355605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456c9788659f4b%3A0x3ea9ff0e2be2b443!2sBlas%20Parera%201662%2C%20W3410FTA%20Corrientes!5e0!3m2!1ses!2sar!4v1599098823998!5m2!1ses!2sar"
+            width="100%"
+            height="200px"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

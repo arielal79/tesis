@@ -34,7 +34,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Editar Rubro</title>
+    <title>Editar Iniciador</title>
 </head>
 <body>
     <header class="container-fluid bg-light header shadow">
@@ -47,7 +47,7 @@
         </div>
       </header>
       <div class="container mt-3">
-        <h2 class="text-center">Editar Rubro</h2>
+        <h2 class="text-center">Editar Iniciador</h2>
         <div class="row shadow">
           <div class="col-xl-4 col-lg-6 col-xs-12 shadow">
             <div class="dropdown p-3">
@@ -55,7 +55,7 @@
                 Inicio
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="index.html">Inico</a>
+                <a class="dropdown-item" href="index.php">Inicio</a>
               </div>
             </div>
             <div class="dropdown p-3">
@@ -70,7 +70,7 @@
                 Bandeja de pases
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="bandeja.html">Recibir</a>
+                <a class="dropdown-item" href="bandeja.php">Recibir</a>
                 <a class="dropdown-item" href="#">Archivar</a>
                 <a class="dropdown-item" href="#">enviar</a>
               </div>
@@ -80,8 +80,8 @@
                 Expedientes
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="nuevo_exp.html">Nuevo</a>
-                <a class="dropdown-item" href="consulta_exp.html">Consultar</a>
+                <a class="dropdown-item" href="nuevo_exp.php">Nuevo</a>
+                <a class="dropdown-item" href="consulta_exp.php">Consultar</a>
                 <a class="dropdown-item" href="#">Buscar</a>
               </div>
             </div>
@@ -90,8 +90,8 @@
                 Usuarios
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="nuevo_usuario.html">Nuevo</a>
-                <a class="dropdown-item" href="edit_usuario.html">Editar</a>
+                <a class="dropdown-item" href="nuevo_usuario.php">Nuevo</a>
+                <a class="dropdown-item" href="edit_usuario.php">Editar</a>
                 <a class="dropdown-item" href="#">Buscar</a>
               </div>
             </div>
@@ -124,11 +124,11 @@
                 Mantenimiento
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="nuevo_rubro.html">Agregar Rubro</a>
-                  <a class="dropdown-item" href="edit_rubro.html">Editar Rubro</a>
-                  <a class="dropdown-item" href="nuevo_iniciador.html">Agregar Iniciador</a>
-                  <a class="dropdown-item" href="edit_iniciador.html">Editar Iniciador</a>
-                  <a class="dropdown-item" href="nueva_repart.html">Agregar Reparticion</a>
+                <a class="dropdown-item" href="nuevo_rubro.php">Agregar Rubro</a>
+                  <a class="dropdown-item" href="edit_rubro.php">Editar Rubro</a>
+                  <a class="dropdown-item" href="nuevo_iniciador.php">Agregar Iniciador</a>
+                  <a class="dropdown-item" href="edit_iniciador.php">Editar Iniciador</a>
+                  <a class="dropdown-item" href="nueva_repart.php">Agregar Reparticion</a>
                   <a class="dropdown-item" href="#">Editar Reparticion</a>
               </div>
             </div>
@@ -146,11 +146,32 @@
         <div class="alert bg-light text-dark shadow">
           <form method="POST" action="#">
             
-            <label for="rubro">Rubro</label>
+            <label for="iniciador">Iniciador</label>
             <input
               type= "text"
-              id="rubro"
-              placeholder="Rubro"
+              id="iniciador"
+              placeholder="Iniciador"
+              maxlength="20"
+            /><br>
+            <label for="nombre">Nombre</label>
+            <input
+              type= "text"
+              id="nombre"
+              placeholder="Iniciador"
+              maxlength="20"
+            />
+            <label for="apellido">Apellido</label>
+            <input
+              type= "text"
+              id="apellido"
+              placeholder="Iniciador"
+              maxlength="20"
+            /><br>
+            <label for="cargo">Cargo</label>
+            <input
+              type= "text"
+              id="cargo"
+              placeholder="Iniciador"
               maxlength="20"
             />
             <br>          
@@ -163,12 +184,12 @@
               maxlength="100"
               rows="5"
               cols="60"
-              placeholder="Descripción del rubro"
+              placeholder="Descripción del Iniciador"
             ></textarea>
             <br>
             <button class="btn btn-dark badge-pill">Guardar</button>
             <button class="btn btn-dark badge-pill">Cancelar</button>
-            <a  href="index.html" class="btn btn-dark badge-pill">Volver</a>
+            <a  href="index.php" class="btn btn-dark badge-pill">Volver</a>
           </form>
         </div>
       </div>
