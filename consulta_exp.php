@@ -1,3 +1,14 @@
+<?php
+include ('conexion2.php');
+$objeto = new Conexion();
+$conexion = $objeto->Conectar();
+
+$consulta = "SELECT * FROM expedientes";
+$resultado = $conexion->prepare($consulta);
+$resultado->execute();
+$expedientes=$resultado->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,6 +19,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!--fin prueba--> 
+    <!-- datatable-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>
+    
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -33,8 +47,15 @@
       src="https://kit.fontawesome.com/10753f982c.js"
       crossorigin="anonymous"
     ></script>
+    
     <link rel="stylesheet" href="css/styles.css" />
     <title>Busqueda de Expedientes</title>
+       <style>
+              table.dataTable thead{
+                background: linear-grandient(to right, #0575E6, #00F260);
+                color: white;
+              }
+       </style>       
   </head>
   <body>
     <header class="container-fluid bg-light header shadow">
@@ -145,39 +166,22 @@
         <div class="col-xl-9 col-lg-6 col-xs-12">
           <div class="alert bg-light text-dark shadow">
             <form method="POST" action="#">
-              <label for="nume_ex">N° Expediente</label>
+             <label for="nume_ex">N° Expediente</label>
               <input
+                name="nume_ex"
                 type="number"
                 id="nume_ex"
-                placeholder="numero incremental"
+                placeholder="numero de expediente"
               />
               <span>
                 <label for="reparticion" class="">Repartición</label>
-                <select id="reparticion">
-                  <option>reparticion1</option>
-                  <option>reparticion2</option>
-                  <option>reparticion3</option>
-                  <option>reparticion4</option>
-                  <option>reparticion2</option>
-                </select>
+               <input type="text" id=" reparticion" name="reparticion" > 
               </span>
-
+              <br>
               <label for="rubro" class="">Rubro</label>
-              <select id="rubro">
-                <option>Rubro</option>
-                <option>Rubro2</option>
-                <option>Rubro3</option>
-                <option>Rubro4</option>
-                <option>Rubro5</option>
-              </select>
+              <input type="text" id="rubro" name="rubro">
               <label for="iniciador" class="">Iniciador</label>
-              <select id="iniciador">
-                <option>Iniciador</option>
-                <option>Iniciador</option>
-                <option>Iniciador</option>
-                <option>Iniciador</option>
-                <option>Iniciador</option>
-              </select>
+              <input type="text" id="iniciador" name="iniciador">
               <br />
               <label for="fec_ini" class="">Fecha de Inicio </label>
               <input type="date" id="fec_ini" placeholder="Fecha de inicio" />
@@ -189,8 +193,39 @@
 
               
             </form>
+            <!--prueba de buscaqueda-->
+            <div class="alert bg-light text-dark shadow">
+              <table id="tablaUsuarios" class="table-striped table-bordered" sytle="width:100%">
+                  <thead class="text-center">
+                      <th>Numero de ex</th>
+                      <th>reparticion</th>
+                      <th>rubro</th>
+                      <th>iniciador</th>
+                      <th>fojas</th>
+                      <th>concepto</th>
+                  </thead>  
+                  <tbody>
+                        <?php
+                             foreach($expedientes as $expedientes){
+                             ?>
+                       <tr>
+                           <td><?php echo $expedientes['nume_ex']?></td> 
+                           <td><?php echo $expedientes['reparticion']?></td> 
+                           <td><?php echo $expedientes['rubro']?></td> 
+                           <td><?php echo $expedientes['iniciador']?></td> 
+                           <td><?php echo $expedientes['fojas']?></td> 
+                           <td><?php echo $expedientes['concepto']?></td>  
+                        </tr>
+                        <?php
+                            }
+                        ?>    
+                  </tbody>
+              </table>              
+        </div>
+        <!--fin de prueba-->
           </div>
         </div>
+        
       </div>
     </div>
     <footer class="contanier-fluid mt-5 bg-dark">
@@ -220,5 +255,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/busquedaExp.js"></script>
   </body>
 </html>

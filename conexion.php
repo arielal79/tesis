@@ -13,3 +13,4 @@ if (mysqli_connect_error($base_datos)) {
     echo "Conexion fallida".mysqli_connect_error();
 
 }
+
